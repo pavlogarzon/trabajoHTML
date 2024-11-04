@@ -71,6 +71,11 @@ footer .redes a {
     margin: 0 10px;
 }
 
+.redes img {
+    width: 30px;
+    height: 30px;
+}
+
 .galeria img {
     width: 300px;
     height: 300px;
@@ -86,7 +91,35 @@ footer .redes a {
     max-width: 900px; 
 }
 
-.cuadrado{
+
+form {
+    padding: 50px;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+label.formulario {
+    float: left;
+    margin: 15px;
+    font-weight: bold;
+}
+
+.cuadrado {
     float: right;
     background-color: #790a674d;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    width: 100px;
 }

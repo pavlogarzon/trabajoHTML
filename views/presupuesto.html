@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li style="background: rgb(0, 0, 0);"><a href="presupuesto.html" class="active">Presupuesto</a></li>
+                <li><a href="presupuesto.html" class="active">Presupuesto</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -26,27 +26,40 @@
         <h2>Solicitar Presupuesto</h2>
 
         <form>
-            <label class="formulario">Nombre</label>
-            <input type="text" class="cuadrado" placeholder="Nombre y apellidos" required> <br><br>
-            <label class="formulario">Teléfono</label>
-            <input type="text" class="cuadrado" placeholder="+34 123 456 789" required><br><br>
-            <label class="formulario">Email</label>
-            <input type="email" class="cuadrado" placeholder="ejemlo@ejempl.com" required><br><br>
-            Solicite más información<br>
-            <textarea cols="30" rows="10" class="cuadrado" placeholder="Escriba aquí todo lo necesario" required></textarea><br><br>
-            <input type="checkbox" required> Política de privacidad<br><br>
+            <label class="formulario" for="nombre">Nombre</label>
+            <input type="text" id="nombre" class="cuadrado" placeholder="Nombre y apellidos" 
+                   pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,}" title="Solo letras y al menos 3 caracteres" required>
+        
+            <label class="formulario" for="telefono">Teléfono</label>
+            <input type="text" id="telefono" class="cuadrado" placeholder="+34 123 456 789" 
+                   pattern="\+34\s\d{3}\s\d{3}\s\d{3}" title="Formato: +34 123 456 789" required>
+        
+            <label class="formulario" for="email">Email</label>
+            <input type="email" id="email" class="cuadrado" placeholder="ejemplo@ejemplo.com" 
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Formato: ejemplo@ejemplo.com" required>
+        
+            <label class="formulario" for="mensaje">Solicite más información</label>
+            <textarea id="mensaje" cols="30" rows="10" class="cuadrado" 
+                      placeholder="Escriba aquí todo lo necesario" required></textarea>
+        
+            <label class="formulario">
+                <input type="checkbox" required> Acepto la política de privacidad
+            </label>
+        
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar">
         </form>
+        
+        
     </main>
 
     <footer>
         <p>Síguenos en nuestras redes:</p>
-    <div class="redes">
-        <a href="https://www.facebook.com"><img src="../fotos/facebook.png" alt="Facebook" width="30px"></a>
-        <a href="https://www.Instagram.com/193.brand/"><img src="../fotos/instagram.png" alt="Instagram" width="30px"></a>
-        <a href="https://www.x.com"><img src="../fotos/x.png" alt="x" width="30px"></a>
-    </div>
+        <div class="redes">
+            <a href="https://www.facebook.com"><img src="../fotos/facebook.png" alt="Facebook" width="256" height="256"></a>
+            <a href="https://www.Instagram.com/193.brand/"><img src="../fotos/instagram.png" alt="Instagram" width="512" height="512"></a>
+            <a href="https://www.x.com"><img src="../fotos/x.png" alt="x" width="1200" height="1200"></a>
+        </div>
         <p>Ojos Albos, Ávila, España</p>
         <p><a href="../views/avisolegal.html">Aviso Legal</a></p>
     </footer>
